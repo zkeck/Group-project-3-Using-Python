@@ -8,7 +8,7 @@ LOCAL_FILE = 'local_copy.log'
 local_file, headers = urlretrieve(URL_PATH, LOCAL_FILE)
 
 
-#Counts total requests in the last 6 months
+#Counts total requests made in the last 6 months
 Six_month_count = 0
 
 for line in open(local_file):
@@ -26,7 +26,7 @@ for line in open(local_file):
     Six_month_count += 1
  
 
-#Counts total requests during the whole time period.
+#Counts total requests made in the time period represented by the log.
 total_count = 0
 
 for line in open(local_file):
